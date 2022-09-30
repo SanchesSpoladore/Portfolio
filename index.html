@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanches Spoladore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/icon.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header id="header">
+    <a href="https://sanches-spoladore.netlify.app">
+      <img src="./assets/logo.svg" alt="logo" id="logo" />
+    </a>
+
+    <nav id="nav">
+      <button id="btn-menu">
+        <span id="hamburger"></span>
+      </button>
+
+      <ul id="menu">
+        <li onclick="fechar()">
+          <a href="#inicio">Inicio</a>
+        </li>
+
+        <li onclick="fechar()">
+          <a href="#sobre">Sobre</a>
+        </li>
+
+        <li onclick="fechar()">
+          <a href="#projetos">Projetos</a>
+        </li>
+
+        <li onclick="fechar()">
+          <a href="#contato">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <div id="texto-principal">
+        <h1 id="nome">Sanches Spoladore</h1>
+        <h2><span>Web</span> design</h2>
+        <p>Front end & Web design</p>
+      </div>
+
+      <img src="./assets/ilustracao.png" alt="Imagem ilustrativa de notebook com códigos saindo">
+    </section>
+
+    <section id="sobre">
+      <div id="conteiner-historia">
+        <div>
+          <h2 class="titulo">Sobre mim</h2>
+          <p id="historia">
+            Me chamo Sanches Lima do Valle Spoladore, tenho 16 anos, nasci na cidade de Cachoeiro de Itapemirim - ES, comecei a ter interesse primeiramente por programação web, no ano de 2017, que foi quando comecei a estudar linguagens como HTML, CSS e JS, porém eu sempre parava de estudar por achar complicado, após isso havia dado um tempo nessa área, porém em 2020 decidi começar a estudar novamente, mas envolvendo Front End e Back End, e depois de um tempo, me apaixonei por Front End, desde de então tenho estudado dia após dia e aprimorando minhas habilidades, hoje em dia acredito que eu seja um ótimo Dev e Profissional e acredito no meu potencial, mas ainda sim estudo muito todos os dias com bastante foco e perseverança. Atualmente meu foco é na parte Front End, gosto de usar boas práticas de código e UI/UX Design.
+          </p>
+        </div>
+
+        <img src="./assets/decoracao.png" alt="Decoração" id="decoracao">
+      </div>
+
+      <div id="habilidades">
+        <h3>Habilidades</h3>
+        <div id="icones">
+          <img src="./assets/html.png" alt="Logo do HTML">
+          <img src="./assets/css.png" alt="Logo do CSS">
+          <img src="./assets/js.png" alt="Logo do JavaScript">
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2 id="titulo-projetos" class="titulo">Projetos</h2>
+      <div id="painel-projetos">
+        <div class="projeto">
+          <img src="./assets/projeto1.png" alt="Imagem do primeiro projeto">
+
+          <div>
+            <p>
+              Projeto criado durante a NLW Together na missão Origin. OriginSix é uma página institucional em formato landing page, responsiva, adequada a diferentes tipos de micro, pequenas e médias empresas.
+            </p>
+
+            <a href="https://originsix-sanches.netlify.app">Ver projeto</a>
+          </div>
+        </div>
+
+        <div class="projeto">
+          <img src="./assets/projeto2.png" alt="Imagem do segundo projeto">
+
+          <div>
+            <p>
+              Projeto criado durante a Maratona Discover 01. O dev.finances é uma aplicação de gestão financeira, onde é possível adicionar e excluir transações e ver o saldo de entrada e saída.
+            </p>
+
+            <a href="https://dev-finances-sanches.netlify.app">Ver projeto</a>
+          </div>
+        </div>
+
+        <div class="projeto">
+          <img src="./assets/projeto3.png" alt="Imagem do terceiro projeto">
+
+          <div>
+            <p>
+              Esta é uma solução para o desafio Launch countdown timer no Frontend Mentor, responsivo para grande parte dos dispositivos. O Launch countdown timer é um temporizador de contagem regressiva até uma data.
+            </p>
+
+            <a href="https://countdown-timer-sanches.netlify.app">Ver projeto</a>
+          </div>
+        </div>
+
+        <div class="projeto">
+          <img src="./assets/projeto4.png" alt="Imagem do quarto projeto">
+
+          <div>
+            <p>
+              Esta é uma solução para o desafio da Easybank landing page no Frontend Mentor, responsivo para grande parte dos dispositivos. A Easybank é um banco digital de última geração.
+            </p>
+
+            <a href="https://landingpage-easybank.netlify.app">Ver projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2 class="titulo">Contato</h2>
+      <div id="conteiner-contatos">
+        <div id="meu-contato">
+          <p id="telefone"><img src="./assets/telefone.svg" alt="Ícone de telefone"> (28) 99918-4613</p>
+          <p id="email"><img src="./assets/email.svg" alt="Ícone de email"> sanches.lvs@gmail.com</p>
+          <p id="local"><img src="./assets/mapa.svg" alt="Ícone de mapa"> Cachoeiro de Itapemirim - ES</p>
+
+          <div>
+            <a href="https://github.com/sanchesspoladore"><img src="./assets/github.svg" alt="Ícone do Github"></a>
+            <a href="https://www.linkedin.com/in/sanches-spoladore"><img src="./assets/linkedin.svg" alt="Ícone do LinkedIn"></a>
+          </div>
+        </div>
+
+        <div id="formulario-mensagem">
+          <form action="https://formsubmit.co/sanches.lvs@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://sanches-spoladore.netlify.app/sucesso.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <label for="nome" id="label-nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+
+            <label for="email" id="label-email">Email</label>
+            <input type="email" name="email" id="email" placeholder="contato@email.com" required>
+
+            <label for="telefone" id="label-telefone">Telefone</label>
+            <input type="text" name="telefone" id="telefone" placeholder="(00) 00000-0000">
+
+            <label for="mensagem" id="label-mensagem">Mensagem</label>
+            <textarea type="text" name="mensagem" id="mensagem" placeholder="O que você precisa?" required></textarea>
+
+            <button type="submit" id="btn-enviar">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <img src="./assets/decoracao.png" alt="Imagem de decoração">
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="ano"><noscript>2022</noscript></span> <a href="https://github.com/sanchesspoladore">Sanches Spoladore</a> - Todos Direitos reservados</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
