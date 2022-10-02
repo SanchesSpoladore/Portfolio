@@ -1,3 +1,5 @@
+@import url("./no-js.css");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -207,6 +209,38 @@ body {
     transform: rotate(-135deg);
     top: -7px;
   }
+
+  #nav.no-js #btn-menu {
+    display: none;
+  }
+
+  #nav.no-js #menu {
+    display: flex;
+    height: max-content;
+    visibility: visible;
+    overflow-y: initial;
+    z-index: 2000;
+    top: 69px;
+  }
+
+  #nav.no-js li {
+    width: max-content;
+  }
+
+  #nav.no-js li:first-child {
+    margin-left: 0.5rem;
+  }
+
+  #nav.no-js a {
+    width: max-content;
+    border-bottom: none;
+    padding: 0.5rem 0;
+    margin: 0 0.5rem;
+  }
+
+  #nav.no-js a::before {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
@@ -298,6 +332,10 @@ body {
 }
 
 @media (max-width: 600px) {
+  .no-js-main {
+    margin-top: 139px;
+  }
+
   #inicio {
     flex-direction: column;
     justify-content: space-evenly;
@@ -484,7 +522,7 @@ body {
   padding: 12px 24px;
   border-radius: 5px;
   margin-top: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
 }

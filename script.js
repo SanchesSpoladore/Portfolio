@@ -49,6 +49,8 @@ function smoothScrollTo(endX, endY, duration) {
 
 // Menu mobile
 const btnMenu = document.getElementById("btn-menu");
+const removerNoJSMenu = document.querySelector(".no-js").classList.remove("no-js");
+const removerNoJSMain = document.querySelector(".no-js-main").classList.remove("no-js-main");
 
 function toggleMenu() {
   const nav = document.getElementById("nav");
