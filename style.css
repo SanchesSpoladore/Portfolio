@@ -23,6 +23,12 @@
   --roboto: 'Roboto', sans-serif;
 }
 
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
 body {
   background-color: var(--p1);
 }
@@ -380,6 +386,7 @@ body {
 #sobre {
   background: var(--p2);
   padding: 2.5rem;
+  position: relative;
 }
 
 #conteiner-historia {
@@ -714,6 +721,7 @@ footer {
   padding: 1rem 2.5rem;
   color: var(--p13);
   background: var(--p3);
+  position: relative;
 }
 
 footer a {
@@ -750,4 +758,10 @@ footer a:hover {
   width: 100%;
   height: 2px;
   display: block;
+}
+
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }

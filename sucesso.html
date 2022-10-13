@@ -13,6 +13,7 @@
   <link rel="shortcut icon" href="./assets/icon.svg" type="image/x-icon">
 </head>
 
+<div id="particles-js"></div>
 <body>
   <header id="header">
     <a href="https://sanches-spoladore.netlify.app">
@@ -28,11 +29,17 @@
     <a href="https://sanches-spoladore.netlify.app/">Voltar</a>
   </main>
 
-  <footer>
+  <footer id="footer">
     <p>© <span id="ano"><noscript>2022</noscript></span> <a href="https://github.com/sanchesspoladore">Sanches Spoladore</a> - Todos Direitos reservados</p>
   </footer>
 
   <script src="./script.js"></script>
+  <script src="./particles.js"></script>
+  <script>
+    particlesJS.load("particles-js", "particles.json", function () {
+      console.log("callback - particles.js config loaded");
+    });
+  </script>
 </body>
 
 </html>
