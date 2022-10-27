@@ -274,6 +274,17 @@ body {
   color: var(--p13);
 }
 
+#texto-principal p:first-child::before {
+  display: none;
+}
+
+#texto-principal p:first-child {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: var(--roboto);
+  color: var(--p13);
+}
+
 #texto-principal h1,
 #texto-principal h2 {
   font-family: var(--poppins);
