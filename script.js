@@ -1,84 +1,66 @@
-// ===== Cabeçalho =====
-// Scroll
-const menuItens = document.querySelectorAll('a[href^="#"]');
+const preLoad = document.getElementById('preload');
+const pagina = document.querySelector('body')
 
-menuItens.forEach((item) => {
-  item.addEventListener("click", scrollToOnClick);
-});
+window.addEventListener('load', () => {
+  preLoad.style.display = 'none'
+  pagina.style.overflow = 'auto'
+})
 
-function getScrollTopByHref(element) {
-  const id = element.getAttribute("href");
-  return document.querySelector(id).offsetTop;
-}
-
-function scrollToOnClick(event) {
-  event.preventDefault();
-  const to = getScrollTopByHref(event.target) - 70;
-  scrollToPosition(to);
-}
-
-function scrollToPosition(to) {
-  smoothScrollTo(0, to);
-}
-
-function smoothScrollTo(endX, endY, duration) {
-  const startX = window.scrollX || window.pageXOffset;
-  const startY = window.scrollY || window.pageYOffset;
-  const distanceX = endX - startX;
-  const distanceY = endY - startY;
-  const startTime = new Date().getTime();
-
-  duration = typeof duration !== "undefined" ? duration : 400;
-
-  const easeInOutQuart = (time, from, distance, duration) => {
-    if ((time /= duration / 2) < 1)
-      return (distance / 2) * time * time * time * time + from;
-    return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
-  };
-
-  const timer = setInterval(() => {
-    const time = new Date().getTime() - startTime;
-    const newX = easeInOutQuart(time, startX, distanceX, duration);
-    const newY = easeInOutQuart(time, startY, distanceY, duration);
-    if (time >= duration) {
-      clearInterval(timer);
-    }
-    window.scroll(newX, newY);
-  }, 1000 / 60);
-}
-
-// Menu mobile
-const btnMenu = document.getElementById("btn-menu");
-const removerNoJSMenu = document.querySelector(".no-js").classList.remove("no-js");
-const removerNoJSMain = document.querySelector(".no-js-main").classList.remove("no-js-main");
+const btnMobile = document.getElementById('btnMobile');
+const nav = document.querySelector('nav');
 
 function toggleMenu() {
-  const nav = document.getElementById("nav");
-  nav.classList.toggle("active");
+  nav.classList.toggle('active')
 }
 
-btnMenu.addEventListener("click", toggleMenu);
+btnMobile.addEventListener('click', toggleMenu);
 
-function fechar() {
-  const nav = document.getElementById("nav");
-  nav.classList.toggle("active");
+const menuItems = document.querySelectorAll('nav a')
+menuItems.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick)
+})
+
+function scrollToIdOnClick(event) {
+  event.preventDefault()
+  nav.classList.toggle('active')
+  const element = event.target;
+  const id = element.getAttribute('href');
+  const section = document.querySelector(id)
+
+  window.scroll({
+    top: section.offsetTop - 70,
+    behavior: 'smooth',
+    left: 0,
+  })
 }
 
-// ===== Inicio =====
 function maquinaEscrever(elemento) {
   const textoArray = elemento.innerHTML.split("");
   elemento.innerText = "";
   textoArray.forEach((letra, i) => {
     setTimeout(function () {
       elemento.innerHTML += letra;
-    }, 75 * i);
+    }, 125 * i);
   });
 }
 
-const titulo = document.getElementById("nome");
+const titulo = document.getElementById("meu-nome");
 maquinaEscrever(titulo);
 
-// Rodapé
-const dataAtual = new Date();
-const ano = dataAtual.getFullYear();
-const localAno = (document.getElementById("ano").innerHTML = ano);
+const receberCopia = document.querySelector('#copia');
+const copia = document.getElementById('input-copia')
+
+setInterval(() => {
+  if (receberCopia.checked) {
+    copia.removeAttribute('disabled');
+    const email = document.getElementById('email').value
+    copia.value = email
+  } else {
+    copia.setAttribute('disabled', 'disabled')
+  }
+}, 1);
+
+const anoAtual = new Date().getFullYear();
+const espacoAno = document.getElementById('ano')
+
+espacoAno.innerHTML = anoAtual
